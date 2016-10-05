@@ -22,11 +22,20 @@ printf "${RED}The first episode number (1,10...), followed by [ENTER]:${NC}"
 echo
 read episode
 episode=$(( episode-1 ))
+# Signature
 printf "${RED}Please enter your signature, followed by [ENTER]:${NC}"
 echo
-#signature='ROKe' # Signature
 read signature
-dir=$(printf ./$title.$saison.FRENCH.$resolution.WEB-DL.H264-$signature/)
+# Directory
+printf "${RED}Please enter the output directory (a folder will be created inside), followed by [ENTER]:${NC}"
+echo
+read initial
+dir=$(printf $initial/$title.$saison.FRENCH.$resolution.WEB-DL.H264-$signature/)
+
+
+
+
+
 #----------------------------------------------------------------------
 #----------------------------DO-NOT-EDIT-------------------------------
 #----------------------------------------------------------------------
