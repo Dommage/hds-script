@@ -22,3 +22,11 @@ ex. Oz.S01E01.720p.FRENCH.720p.H264-ROKe.flv
 - [x] download.sh user input
 - [ ] download.sh language and codec option
 - [ ] rework encode.sh with user input
+- [ ] create a separate tv-show.sh and movie.sh from download.sh
+- [ ] create encode.sh profile for easy encoding
+- [ ] all-in-one script for downloading, encoding and maybe rsync with a server
+- [ ] give users options as of downloading, encoding and/or rsync
+
+- [ ] find website compatible with HDS and maybe yt-dl
+
+
