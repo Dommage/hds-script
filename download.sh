@@ -31,11 +31,6 @@ printf "${RED}Please enter the output directory (a folder will be created inside
 echo
 read initial
 dir=$(printf $initial/$title.$saison.FRENCH.$resolution.WEB-DL.H264-$signature/)
-
-
-
-
-
 #----------------------------------------------------------------------
 #----------------------------DO-NOT-EDIT-------------------------------
 #----------------------------------------------------------------------
