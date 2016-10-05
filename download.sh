@@ -25,8 +25,8 @@ read signature
 dir=$(printf ./$title.$saison.FRENCH.$resolution.WEB-DL.H264-$signature/)
 #------------ Put results of HDS Link Detector addons here-------------
 #----------------------------------------------------------------------
-ep1='php AdobeHDS.php --manifest "http://toutvuniver1-vh.akamaihd.net/z/012/mp4/o/2015-05-01_07_00_00_omerta_0026_,500,800,1200,2000,3000,.mp4.csmil/manifest.f4m?hdnea=st=1475629423~exp=1478221423~acl=/z/012/mp4/o/2015-05-01_07_00_00_omerta_0026_*~hmac=b0f2cc5e6033dc29b9678d98d09c216209791ffd1ecc5933384db7b76dfce792&g=FSYNVNKQCWAT&hdcore=3.10.0" --delete --auth "hdntl=exp=1475715826~acl=%2fz%2f012%2fmp4%2fo%2f2015-05-01_07_00_00_omerta_0026_*~data=hdntl~hmac=2f0036af1e5cd81f239e651153c502c7e076100b11dec4819fd49352cc100bb6&als=0,3,NaN,4,0,NaN,0,0,0,53,f,0,2736,f,u,FSYNVNKQCWAT,3.10.0,53&hdcore=3.10.0" --useragent "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/52.0.2743.116 Chrome/52.0.2743.116 Safari/537.36"'
-ep2='php AdobeHDS.php --manifest "http://toutvuniver1-vh.akamaihd.net/z/012/mp4/o/2015-05-01_07_00_00_omerta_0026_,500,800,1200,2000,3000,.mp4.csmil/manifest.f4m?hdnea=st=1475629423~exp=1478221423~acl=/z/012/mp4/o/2015-05-01_07_00_00_omerta_0026_*~hmac=b0f2cc5e6033dc29b9678d98d09c216209791ffd1ecc5933384db7b76dfce792&g=FSYNVNKQCWAT&hdcore=3.10.0" --delete --auth "hdntl=exp=1475715826~acl=%2fz%2f012%2fmp4%2fo%2f2015-05-01_07_00_00_omerta_0026_*~data=hdntl~hmac=2f0036af1e5cd81f239e651153c502c7e076100b11dec4819fd49352cc100bb6&als=0,3,NaN,4,0,NaN,0,0,0,53,f,0,2736,f,u,FSYNVNKQCWAT,3.10.0,53&hdcore=3.10.0" --useragent "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/52.0.2743.116 Chrome/52.0.2743.116 Safari/537.36"'
+ep1=''
+ep2=''
 ep3=''
 ep4=''
 ep5=''
