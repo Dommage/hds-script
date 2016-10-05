@@ -2,15 +2,31 @@
 RED='\033[0;31m                               ' # Red tab
 NC='\033[0m' # No Color
 quality='high' # Quality to use
-title='Catherine' # Title of the tv show "Directory name, File name"
-saison='S06' # Season of the tv show "Directory name, File name"
-resolution='720p' # Resolution of the video "Informative"
+echo 
+echo 
+echo 
+#title='Catherine' # Title of the tv show "Directory name, File name"
+printf "${RED}Please enter the Title (No Space), followed by [ENTER]:${NC}"
+echo
+read title
+#saison='S06' # Season of the tv show "Directory name, File name"
+printf "${RED}Please enter the Season (S01 format), followed by [ENTER]:${NC}"
+echo
+read saison
+#resolution='720p' # Resolution of the video "Informative"
+printf "${RED}In what resolution are those stream (480p,720p..), followed by [ENTER]:${NC}"
+echo
+read resolution
 episode=00 # One episode before the ones  that you want.
-signature='ROKe' # Signature
-dir=$(printf /mnt/f/VIDEO/$title.$saison.FRENCH.$resolution.WEB-DL.H264-$signature/)
-#-----------------------------
-ep1=''
-ep2=''
+printf "${RED}Please enter your signature, followed by [ENTER]:${NC}"
+echo
+#signature='ROKe' # Signature
+read signature
+dir=$(printf ./$title.$saison.FRENCH.$resolution.WEB-DL.H264-$signature/)
+#------------ Put results of HDS Link Detector addons here-------------
+#----------------------------------------------------------------------
+ep1='php AdobeHDS.php --manifest "http://toutvuniver1-vh.akamaihd.net/z/012/mp4/o/2015-05-01_07_00_00_omerta_0026_,500,800,1200,2000,3000,.mp4.csmil/manifest.f4m?hdnea=st=1475629423~exp=1478221423~acl=/z/012/mp4/o/2015-05-01_07_00_00_omerta_0026_*~hmac=b0f2cc5e6033dc29b9678d98d09c216209791ffd1ecc5933384db7b76dfce792&g=FSYNVNKQCWAT&hdcore=3.10.0" --delete --auth "hdntl=exp=1475715826~acl=%2fz%2f012%2fmp4%2fo%2f2015-05-01_07_00_00_omerta_0026_*~data=hdntl~hmac=2f0036af1e5cd81f239e651153c502c7e076100b11dec4819fd49352cc100bb6&als=0,3,NaN,4,0,NaN,0,0,0,53,f,0,2736,f,u,FSYNVNKQCWAT,3.10.0,53&hdcore=3.10.0" --useragent "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/52.0.2743.116 Chrome/52.0.2743.116 Safari/537.36"'
+ep2='php AdobeHDS.php --manifest "http://toutvuniver1-vh.akamaihd.net/z/012/mp4/o/2015-05-01_07_00_00_omerta_0026_,500,800,1200,2000,3000,.mp4.csmil/manifest.f4m?hdnea=st=1475629423~exp=1478221423~acl=/z/012/mp4/o/2015-05-01_07_00_00_omerta_0026_*~hmac=b0f2cc5e6033dc29b9678d98d09c216209791ffd1ecc5933384db7b76dfce792&g=FSYNVNKQCWAT&hdcore=3.10.0" --delete --auth "hdntl=exp=1475715826~acl=%2fz%2f012%2fmp4%2fo%2f2015-05-01_07_00_00_omerta_0026_*~data=hdntl~hmac=2f0036af1e5cd81f239e651153c502c7e076100b11dec4819fd49352cc100bb6&als=0,3,NaN,4,0,NaN,0,0,0,53,f,0,2736,f,u,FSYNVNKQCWAT,3.10.0,53&hdcore=3.10.0" --useragent "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/52.0.2743.116 Chrome/52.0.2743.116 Safari/537.36"'
 ep3=''
 ep4=''
 ep5=''
@@ -41,9 +57,9 @@ ep29=''
 ep30=''
 #-----------------------------
 #-----------------------------
-#-----DO--NOT--EDIT------
+#-------DO--NOT--EDIT---------
 #-----------------------------
-#--------STARTING---------
+#-----------------------------
 episode=$(( episode+1 ))
 printf "${RED}Downloading $title Episode $episode $saison${NC}\n"
 eval $ep1 --outdir "$dir" --outfile "$title.${saison}E0$episode.FRENCH.$resolution.WEB-DL.H264-$signature.flv" --quality $quality &&
