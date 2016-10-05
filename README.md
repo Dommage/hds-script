@@ -16,3 +16,9 @@ title.seasonepisode.language.resolution.codec-signature.flv
 
 ex. Oz.S01E01.720p.FRENCH.720p.H264-ROKe.flv
 ```
+
+##Things to do
+
+- [x] download.sh user input
+- [ ] download.sh language and codec option
+- [ ] rework encode.sh with user input
