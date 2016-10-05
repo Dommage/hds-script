@@ -37,10 +37,9 @@ dir=$(printf $initial/$title.$saison.FRENCH.$resolution.WEB-DL.H264-$signature/)
 FILE=$1
 while read -r line || [[ -n "$line" ]]; do
 	episode=$(( episode+1 ))
-    printf "${RED}Downloading $title $saison Episode $episode ${NC}\n"
+	printf "${RED}Downloading $title $saison Episode $episode ${NC}\n"
 	eval $line --outdir "$dir" --outfile "$title.${saison}E0$episode.FRENCH.$resolution.WEB-DL.H264-$signature.flv" --quality $quality
 done < $FILE
-#
-#
-#
-# Created by Dommage
+######################
+# Created by Dommage #
+######################
