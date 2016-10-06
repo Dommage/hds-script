@@ -3,7 +3,7 @@ RED='\033[0;31m                               ' # Red tab
 NC='\033[0m' # No Color
 quality='high' # Quality to use
 # Title of the tv show "Directory name, File name"
-printf "${RED}Title (No Space, use dot), followed by [ENTER]:${NC}"
+printf "\n\n\n${RED}Title (No Space, use dot), followed by [ENTER]:${NC}"
 echo
 read title
 # Season of the tv show "Directory name, File name"
