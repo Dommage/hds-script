@@ -2,11 +2,8 @@
 RED='\033[0;31m                               ' # Red tab
 NC='\033[0m' # No Color
 quality='high' # Quality to use
-echo 
-echo 
-echo 
 # Title of the tv show "Directory name, File name"
-printf "${RED}Title (No Space, use dot), followed by [ENTER]:${NC}"
+printf "\n\n\n${RED}Title (No Space, use dot), followed by [ENTER]:${NC}"
 echo
 read title
 # Season of the tv show "Directory name, File name"
@@ -31,14 +28,27 @@ printf "${RED}Please enter the output directory (a folder will be created inside
 echo
 read initial
 dir=$(printf $initial/$title.$saison.FRENCH.$resolution.WEB-DL.H264-$signature/)
-#----------------------------------------------------------------------
-#----------------------------DO-NOT-EDIT-------------------------------
-#----------------------------------------------------------------------
+# Language
+printf "${RED}Language (All in CAP, ex FRENCH), followed by [ENTER]:${NC}"
+echo
+read lang
+# Title of the tv show "Directory name, File name"
+printf "${RED}Codec used (H264,x265...), followed by [ENTER]:${NC}"
+echo
+read codec
+#######################################################################
+#############################DO-NOT-EDIT###############################
+#######################################################################
 FILE=$1
 while read -r line || [[ -n "$line" ]]; do
 	episode=$(( episode+1 ))
 	printf "${RED}Downloading $title $saison Episode $episode ${NC}\n"
-	eval $line --outdir "$dir" --outfile "$title.${saison}E0$episode.FRENCH.$resolution.WEB-DL.H264-$signature.flv" --quality $quality
+	if (( episode < 10 ));
+		then
+	eval $line --outdir "$dir" --outfile "$title.${saison}E0$episode.$lang.$resolution.WEB-DL.$codec-$signature.flv" --quality $quality
+		else
+	eval $line --outdir "$dir" --outfile "$title.${saison}E$episode.$lang.$resolution.WEB-DL.$codec-$signature.flv" --quality $quality
+fi
 done < $FILE
 ######################
 # Created by Dommage #
