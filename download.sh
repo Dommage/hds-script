@@ -43,7 +43,12 @@ FILE=$1
 while read -r line || [[ -n "$line" ]]; do
 	episode=$(( episode+1 ))
 	printf "${RED}Downloading $title $saison Episode $episode ${NC}\n"
+	if (( episode < 10 ));
+		then
 	eval $line --outdir "$dir" --outfile "$title.${saison}E0$episode.$lang.$resolution.WEB-DL.$codec-$signature.flv" --quality $quality
+		else
+	eval $line --outdir "$dir" --outfile "$title.${saison}E$episode.$lang.$resolution.WEB-DL.$codec-$signature.flv" --quality $quality
+fi
 done < $FILE
 ######################
 # Created by Dommage #
