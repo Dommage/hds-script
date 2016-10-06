@@ -20,7 +20,7 @@ ex. Oz.S01E01.720p.FRENCH.720p.H264-ROKe.flv
 ##Things to do
 
 - [x] download.sh user input
-- [ ] download.sh language and codec option
+- [x] download.sh language and codec option
 - [ ] rework encode.sh with user input
 - [ ] create a separate tv-show.sh and movie.sh from download.sh
 - [ ] create encode.sh profile for easy encoding
