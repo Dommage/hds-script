@@ -14,7 +14,7 @@ resulting in a
 ```
 title.seasonepisode.language.resolution.codec-signature.flv
 
-ex. Oz.S01E01.720p.FRENCH.720p.H264-ROKe.flv
+ex. Oz.S01E01.FRENCH.720p.H264-ROKe.flv
 ```
 
 ##Things to do
